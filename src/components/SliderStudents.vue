@@ -20,23 +20,25 @@ export default {
                 },
             ],
             index: 0,
-            selectedIndex: 0,
+
         }
     },
     methods: {
         nextSlide() {
             if (this.index == this.students.length - 1) {
                 this.index = 0;
+            } else {
+                this.index++;
             }
-            this.index++;
 
         },
 
         prevSlide() {
             if (this.index == 0) {
                 this.index = this.students.length - 1;
+            } else {
+                this.index--;
             }
-            this.index--;
         }
     },
 }
@@ -53,7 +55,15 @@ export default {
                 </div>
 
                 <div class="images-slide">
-                    <img v-for="(student, i) in students" :src=student.image alt="students-1">
+                    <div class="image-left">
+                        <img :src=students[index].image alt="">
+                    </div>
+                    <div class="image-selected">
+                        <img :src=students[index].image alt="">
+                    </div>
+                    <div class="image-right">
+                        <img :src=students[2].image alt="">
+                    </div>
                 </div>
 
                 <div class="arrow-right" @click="nextSlide()">
@@ -107,5 +117,11 @@ h2 {
         }
 
     }
+
+    .vote-review {
+        color: #fcb900;
+    }
+
+
 }
 </style>
