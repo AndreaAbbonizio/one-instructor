@@ -9,6 +9,7 @@ export const store = reactive({
             level: 'Advanced',
             lectures: '8 Lectures',
             duration: '6 hours',
+            price: '$59',
         },
 
         {
@@ -18,6 +19,7 @@ export const store = reactive({
             level: 'Advanced',
             lectures: '8 Lectures',
             duration: '6 hours',
+            price: '$89',
         },
 
         {
@@ -27,6 +29,7 @@ export const store = reactive({
             level: 'Advanced',
             lectures: '6 Lectures',
             duration: '6 hours',
+            price: '$69',
         },
 
         {
@@ -36,6 +39,7 @@ export const store = reactive({
             level: 'Intermediate',
             lectures: '6 Lectures',
             duration: '6 hours',
+            price: '$29',
         },
 
         {
@@ -45,6 +49,7 @@ export const store = reactive({
             level: 'Intermediate',
             lectures: '6 Lectures',
             duration: '6 hours',
+            price: '$59',
         },
 
         {
@@ -54,6 +59,7 @@ export const store = reactive({
             level: 'Begginer',
             lectures: '6 Lectures',
             duration: '6 hours',
+            price: '$39',
         }
 
 

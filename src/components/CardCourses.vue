@@ -2,23 +2,35 @@
 export default {
     data() {
         return {
-
+            isHovered: false,
         }
     },
     props: {
         course: Object,
+    },
+
+    methods: {
+        changeHovered() {
+            this.isHovered = true;
+        },
+        notHovered() {
+            this.isHovered = false;
+        },
     }
 
 }
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @mouseover="changeHovered()" @mouseleave="notHovered()">
         <div :class="course.level == 'Advanced' ? 'special' : 'normal'">
             SPECIAL
         </div>
         <div class="card-image">
             <img :src=course.image alt="Image course">
+            <div class="price" :class="isHovered == true ? 'active' : ''">
+                {{ course.price }}
+            </div>
         </div>
 
         <div class="text-card">
@@ -76,6 +88,24 @@ export default {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .price {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: #00000094;
+            color: white;
+            font-size: 1.7em;
+            font-weight: bold;
+        }
+
+        .active {
+            display: flex;
         }
     }
 

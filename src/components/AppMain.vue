@@ -72,6 +72,8 @@ export default {
         margin-bottom: 30px;
     }
 
+
+
     .container-cards {
         display: flex;
         flex-wrap: wrap;
@@ -91,6 +93,11 @@ export default {
         color: #ffffff;
         background-color: #fcb900;
         margin-bottom: 40px;
+
+        &:hover {
+            background-color: #fcb900cc;
+            transition: 1s linear;
+        }
     }
 }
 

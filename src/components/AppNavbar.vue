@@ -1,5 +1,12 @@
 <script>
 export default {
+    data() {
+        return {
+            listNav: [
+                'Courses', 'Course Formats', 'Add Course', 'Pages', 'Demos'
+            ],
+        }
+    },
 }
 
 </script>
@@ -17,16 +24,11 @@ export default {
         <div class="container-links">
             <!-- list links -->
             <ul>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Course Formats</a></li>
-                <li id="new">
-                    <span>NEW</span>
-                    <a href="#">
-                        Add Course
-                    </a>
+                <li v-for="item in listNav">
+                    <span v-if="item == 'Add Course'">NEW</span>
+                    <a href="#" :class="item == 'Demos' ? 'active' : ''">{{ item }}</a>
                 </li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Demos</a></li>
+
                 <li id="icons">
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -50,8 +52,9 @@ nav {
     max-width: 1100px;
     margin: 0 auto;
 
+
     .container-logo {
-        padding: 20px 0;
+        padding: 30px 0;
     }
 
     ul {
@@ -60,7 +63,18 @@ nav {
         font-size: 1.1em;
         font-weight: bold;
 
-        #new {
+
+        .active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #f2b91e;
+            margin-top: .3em;
+            border-radius: 6px;
+        }
+
+        li {
             position: relative;
 
             span {
@@ -73,6 +87,17 @@ nav {
                 color: white;
                 border-radius: 8px 8px 8px 0;
             }
+
+            .active::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #f2b91e;
+                margin-top: .3em;
+                border-radius: 6px;
+            }
+
         }
 
 

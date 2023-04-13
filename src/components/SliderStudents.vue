@@ -20,8 +20,8 @@ export default {
                 },
             ],
             index: 0,
-            imageLeft: 1,
-
+            indexLeft: 1,
+            indexRight: 2,
         }
     },
     methods: {
@@ -30,7 +30,18 @@ export default {
                 this.index = 0;
             } else {
                 this.index++;
+            };
+            if (this.indexLeft == this.students.length - 1) {
+                this.indexLeft = 0;
+            } else {
+                this.indexLeft++;
+            };
+            if (this.indexRight == this.students.length - 1) {
+                this.indexRight = 0;
+            } else {
+                this.indexRight++;
             }
+
         },
 
         prevSlide() {
@@ -42,6 +53,8 @@ export default {
         },
 
     },
+
+
 }
 </script>
 
@@ -50,6 +63,7 @@ export default {
     <h2>What Students Say</h2>
     <div class="container-students">
         <div class="container-slider">
+
             <div class="slide">
                 <div class="arrow-left" @click="prevSlide()">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -57,13 +71,13 @@ export default {
 
                 <div class="images-slide">
                     <div class="image-left">
-                        <img :src=students[1].image alt="">
+                        <img :src=students[indexLeft].image alt="">
                     </div>
                     <div class="image-selected">
                         <img :src=students[index].image alt="">
                     </div>
                     <div class="image-right">
-                        <img :src=students[2].image alt="">
+                        <img :src=students[indexRight].image alt="">
                     </div>
                 </div>
 
@@ -111,7 +125,11 @@ h2 {
 
         .images-slide {
             display: flex;
-            gap: 15px;
+            gap: 30px;
+
+            .image-selected {
+                transform: scale(1.2);
+            }
 
             img {
                 border-radius: 50%;

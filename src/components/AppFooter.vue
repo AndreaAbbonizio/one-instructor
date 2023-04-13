@@ -69,6 +69,8 @@ export default {
                 </div>
 
             </div>
+            <!--/ container contact -->
+
 
             <!-- list pages -->
             <div class="inner-footer">
@@ -77,7 +79,7 @@ export default {
                     <li v-for="page in pages"><a href="#">{{ page }}</a></li>
                 </ul>
             </div>
-            <!-- list pages -->
+            <!-- /list pages -->
 
             <!-- container blog -->
             <div class="inner-footer">
