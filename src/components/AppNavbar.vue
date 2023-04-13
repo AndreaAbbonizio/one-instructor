@@ -19,7 +19,12 @@ export default {
             <ul>
                 <li><a href="#">Courses</a></li>
                 <li><a href="#">Course Formats</a></li>
-                <li><a href="#">Add Course</a></li>
+                <li id="new">
+                    <span>NEW</span>
+                    <a href="#">
+                        Add Course
+                    </a>
+                </li>
                 <li><a href="#">Pages</a></li>
                 <li><a href="#">Demos</a></li>
                 <li id="icons">
@@ -54,6 +59,21 @@ nav {
         gap: 1.5em;
         font-size: 1.1em;
         font-weight: bold;
+
+        #new {
+            position: relative;
+
+            span {
+                position: absolute;
+                top: -20px;
+                right: -10px;
+                padding: .4em;
+                font-size: .6em;
+                background-color: red;
+                color: white;
+                border-radius: 8px 8px 8px 0;
+            }
+        }
 
 
         #icons {

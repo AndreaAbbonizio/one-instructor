@@ -1,8 +1,5 @@
 <script>
 export default {
-    data() {
-
-    }
 }
 </script>
 
@@ -86,7 +83,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 50px;
 
         max-width: 1100px;
         margin: 0 auto;

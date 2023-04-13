@@ -26,6 +26,13 @@ export default {
                 <img src="/images/book.png" alt="Book">
             </div>
         </div>
+        <div class="icon-fixed">
+            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-regular fa-circle-up"></i>
+            <i class="fa-solid fa-wrench"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-mobile-screen"></i>
+        </div>
     </div>
 </template>
 
@@ -33,6 +40,7 @@ export default {
 <style lang="scss">
 .bg-image {
     background-image: url('/images/slider-1.jpg');
+    position: relative;
 
     .link-book {
         display: flex;
@@ -75,6 +83,21 @@ export default {
                 height: 100%;
             }
         }
+    }
+
+    .icon-fixed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .7em;
+        color: #333333;
+
+        position: absolute;
+        top: 15px;
+        right: 0;
+        padding: 15px 10px;
+        background-color: white;
+        font-size: 1.2em;
     }
 }
 </style>

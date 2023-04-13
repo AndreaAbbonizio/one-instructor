@@ -20,6 +20,7 @@ export default {
                 },
             ],
             index: 0,
+            imageLeft: 1,
 
         }
     },
@@ -30,7 +31,6 @@ export default {
             } else {
                 this.index++;
             }
-
         },
 
         prevSlide() {
@@ -39,7 +39,8 @@ export default {
             } else {
                 this.index--;
             }
-        }
+        },
+
     },
 }
 </script>
@@ -56,7 +57,7 @@ export default {
 
                 <div class="images-slide">
                     <div class="image-left">
-                        <img :src=students[index].image alt="">
+                        <img :src=students[1].image alt="">
                     </div>
                     <div class="image-selected">
                         <img :src=students[index].image alt="">
@@ -97,6 +98,7 @@ h2 {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 50px;
 
     .slide {
         display: flex;

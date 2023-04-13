@@ -70,9 +70,21 @@ export default {
     padding: 20px;
     box-shadow: 5px 5px 5px 5px #edf2f5;
     margin-bottom: .7em;
+    color: #fcb900;
+
+
+    &:hover {
+        background-color: #fcb900;
+        color: #ffffff;
+    }
 
     h3 {
         margin-bottom: .5em;
+        color: #333333;
+    }
+
+    p {
+        color: #333333;
     }
 
     .icon-card {
@@ -81,8 +93,8 @@ export default {
 
         i {
             font-size: 3em;
-            color: #fcb900;
         }
     }
+
 }
 </style>
